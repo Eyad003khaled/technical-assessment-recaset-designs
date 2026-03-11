@@ -12,13 +12,13 @@ class RecastDesigns extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(
-        systemStatusBarContrastEnforced: true,
-        statusBarColor: AppColors.white,
-        statusBarIconBrightness: Brightness.dark,
-        systemNavigationBarIconBrightness: Brightness.light,
-      ),
-    );
+  const SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent, // important
+    statusBarIconBrightness: Brightness.light, // icons over dark image
+    statusBarBrightness: Brightness.dark,
+    systemNavigationBarIconBrightness: Brightness.light,
+  ),
+);
     return ScreenUtilInit(
       designSize: DeviceTypeService.isTablet(context)
           ? DeviceTypeService.isLandscape(context)
@@ -49,7 +49,7 @@ class RecastDesigns extends StatelessWidget {
               ),
             ),
           ),
-          initialRoute: AppRouter.splashScreen,
+          initialRoute: AppRouter.homeScreen,
           onGenerateRoute: AppRouter.generateRoute,
         );
       },

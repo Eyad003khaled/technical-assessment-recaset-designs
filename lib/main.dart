@@ -12,6 +12,8 @@ void main() async {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+
   await ScreenUtil.ensureScreenSize();
 
   runApp(const RecastDesigns());
