@@ -5,5 +5,7 @@ abstract class AppStrings {
       restaurantTitle = "CEANO",
       restaurantDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 
       atmoshpere = "Atmosphere",
+      foodMenu = "Food Menu",
+      currency = "JOD",
       next = "next";
 }

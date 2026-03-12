@@ -28,7 +28,7 @@ class AtmosphereSection extends StatelessWidget {
           SizedBox(height: 12.h),
 
           SizedBox(
-            height: 120.h,
+            height: 239.h,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: atmospheres.length,

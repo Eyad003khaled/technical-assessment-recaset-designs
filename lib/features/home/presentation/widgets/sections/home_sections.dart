@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'atmosphere_section.dart';
+import 'food_menu_section.dart';
 import 'restaurant_section.dart';
 
 class HomeSections extends StatelessWidget {
@@ -20,6 +21,9 @@ const HomeSections({ super.key });
                ),
                SliverToBoxAdapter(
                   child: AtmosphereSection(),
+               ),
+               SliverToBoxAdapter(
+                  child: FoodMenuSection(),
                )
 
                 ]
