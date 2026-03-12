@@ -8,5 +8,8 @@ abstract class AppStrings {
       foodMenu = "Food Menu",
       currency = "JOD",
       mainCourse = "Main Course",
+      preparation = "Preparation",
+      taxService = "+ tax & service",
+      addOrder = "Add To Order",
       next = "next";
 }

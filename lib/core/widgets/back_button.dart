@@ -18,9 +18,10 @@ class BackButtonWidget extends StatelessWidget {
           filter: ImageFilter.blur(sigmaX: 0.3, sigmaY: 0.3),
           child: Container(
             decoration: BoxDecoration(
+            color: Colors.black.withOpacity(0.25), // transparent overlay
               shape: BoxShape.circle,
               border: Border.all(
-                width: 1.5,
+                width: 1.w,
               ),
             ),
             child: Center(

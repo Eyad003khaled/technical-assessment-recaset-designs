@@ -9,6 +9,7 @@ abstract class AppColors {
   static const Color secondaryColor = Color(0xffBE2326);
     static const Color backgroundColor = Color(0xff000000);
     static const Color blurBlackColor = Color(0xff00000066);
+    static const Color taxColor = Color(0xff797B74);
 
   
 

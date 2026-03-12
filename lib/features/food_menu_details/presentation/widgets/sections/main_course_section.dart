@@ -8,7 +8,8 @@ import '../../../../../core/utils/app_strings.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 
 class MainCourseSection extends StatelessWidget {
-  const MainCourseSection({super.key});
+  const MainCourseSection(
+      {super.key, required this.foodImage, required this.foodTitle});
   final String foodImage;
   final String foodTitle;
   @override
@@ -17,10 +18,24 @@ class MainCourseSection extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Stack(children: [
-          Image.asset(foodImage),
-          const BackButtonWidget(),
-        ]),
+        Stack(
+          children: [
+            Positioned(
+              child: SizedBox(
+                width: double.infinity,
+                height: 289.h,
+                child: Image.asset(
+                  foodImage,
+                  fit: BoxFit.cover, // makes sure the image fills the box
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 13.w, vertical: 32.h),
+              child: const BackButtonWidget(),
+            ),
+          ],
+        ),
         Padding(
             padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
             child: Column(

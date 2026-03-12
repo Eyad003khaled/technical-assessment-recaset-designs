@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
+import '../../../../../core/routes/app_router.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_strings.dart';
 import '../../../../../core/utils/app_text_styles.dart';
@@ -40,7 +41,6 @@ class FoodMenuSection extends StatelessWidget {
               itemBuilder: (context, index) {
                 final item = menuItems[index];
 
-              
                 final heights = [
                   154.0,
                   187.0,
@@ -49,14 +49,16 @@ class FoodMenuSection extends StatelessWidget {
                 ];
 
                 return GestureDetector(
-                  onTap : () {
-                    Navigator.pushNamed(context,AppRouter.foodMenuDetailsScreen,
-                    arguments: {
-            'foodImage': item.image,
-            'foodTitle': item.title,
-          },
-                    )
-                    // Handle item tap, e.g., navigate to details page
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      AppRouter.foodMenuDetailsScreen,
+                      arguments: {
+                        'foodImage': item.image,
+                        'foodTitle': item.title,
+                        'foodPrice': item.price,
+                      },
+                    );
                   },
                   child: FoodMenuListViewItem(
                     imagePath: item.image,
