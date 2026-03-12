@@ -13,44 +13,42 @@ class AddToOrderButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 160.w, 
-      height: 56.h,
+      // width: 160.w,
+      // height: 56.h,
+      padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 4.h),
       decoration: BoxDecoration(
         gradient: const LinearGradient(
           begin: Alignment.bottomLeft,
           end: Alignment.topRight,
           colors: [Color(0xFFE4B679), Color(0xFFFEE5C4)],
         ),
-        borderRadius: BorderRadius.circular(30.r), 
+        borderRadius: BorderRadius.circular(30.r),
         border: Border.all(
-          color: Colors.white.withOpacity(0.3), 
+          color: Colors.white.withOpacity(0.3),
           width: 1,
         ),
       ),
-      padding:  EdgeInsets.symmetric(horizontal: 10.w),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-           Padding(
-            padding:  EdgeInsets.only(left: 10.w),
+          Padding(
+            padding: EdgeInsets.only(left: 10.w),
             child: Text(
               AppStrings.addOrder,
               style: AppTextStyles.satoshiVariableBoldstyle14.copyWith(
-                fontSize: 10.sp,
                 color: AppColors.black,
-              
               ),
             ),
           ),
-          // Circular arrow icon
+          SizedBox(width: 8.w),
           Container(
             height: 42,
             width: 42,
             decoration: BoxDecoration(
-              color: Colors.black.withOpacity(0.2), // Subtle overlay
+              color: Colors.black.withOpacity(0.2),
               shape: BoxShape.circle,
               border: Border.all(
-                color: Colors.black.withOpacity(0.1), // Subtle border
+                color: Colors.black.withOpacity(0.1),
                 width: 1,
               ),
             ),

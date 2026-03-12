@@ -36,14 +36,13 @@ class FoodPriceSection extends StatelessWidget {
                         "${foodPrice.toStringAsFixed(2)} ${AppStrings.currency}",
                         style:
                             AppTextStyles.satoshiVariableBoldstyle14.copyWith(
-                          fontSize: 15.sp,
+                          fontSize: 20.sp,
                         ),
                       )),
-                  SizedBox(height: 9.h),
                   Text(
                     AppStrings.taxService,
                     style: AppTextStyles.satoshiVariableBoldstyle14
-                        .copyWith(fontSize: 10.sp, color: AppColors.taxColor),
+                        .copyWith(fontSize: 14.sp, color: AppColors.taxColor),
                   ),
                 ],
               ),

@@ -20,7 +20,7 @@ class AtmosphereSection extends StatelessWidget {
           Text(
             AppStrings.atmoshpere,
             style: AppTextStyles.satoshiVariableBoldstyle14.copyWith(
-              fontSize: 11.sp,
+              fontSize: 14.sp,
               color: AppColors.defaultColor.withOpacity(0.81),
             ),
           ),

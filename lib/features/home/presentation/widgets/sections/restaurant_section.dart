@@ -41,7 +41,7 @@ class RestaurantSection extends StatelessWidget {
                 Text(
                   AppStrings.restaurantName,
                   style: AppTextStyles.satoshiVariableBoldstyle14.copyWith(
-                      fontSize: 10.sp,
+                      fontSize: 14.sp,
                       color: AppColors.defaultColor.withOpacity(0.8)),
                 ),
                 SizedBox(
@@ -59,7 +59,7 @@ class RestaurantSection extends StatelessWidget {
                   child: Text(
                     AppStrings.restaurantTitle,
                     style: AppTextStyles.satoshiVariableBoldstyle14.copyWith(
-                      fontSize: 22.sp,
+                      fontSize: 28.sp,
                       color: Colors.white, // required for ShaderMask
                     ),
                   ),

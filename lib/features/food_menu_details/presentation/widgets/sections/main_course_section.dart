@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:technical_assessment_recast_designs/core/utils/app_images.dart';
 import 'package:technical_assessment_recast_designs/core/widgets/back_button.dart';
 
 import '../../../../../core/utils/app_colors.dart';
@@ -32,7 +31,9 @@ class MainCourseSection extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 13.w, vertical: 32.h),
-              child: const BackButtonWidget(),
+              child: const BackButtonWidget(
+                allowBack: true,
+              ),
             ),
           ],
         ),
@@ -45,7 +46,7 @@ class MainCourseSection extends StatelessWidget {
                 Text(
                   AppStrings.mainCourse,
                   style: AppTextStyles.satoshiVariableBoldstyle14.copyWith(
-                      fontSize: 10.sp,
+                      fontSize: 12.sp,
                       color: AppColors.defaultColor.withOpacity(0.6)),
                 ),
                 SizedBox(
@@ -63,7 +64,7 @@ class MainCourseSection extends StatelessWidget {
                   child: Text(
                     foodTitle,
                     style: AppTextStyles.satoshiVariableBoldstyle14.copyWith(
-                      fontSize: 22.sp,
+                      fontSize: 24.sp,
                       color: Colors.white, // required for ShaderMask
                     ),
                   ),
@@ -73,14 +74,14 @@ class MainCourseSection extends StatelessWidget {
                 ),
                 Text(
                   AppStrings.restaurantDescription,
-                  style: AppTextStyles.satoshiVariableBoldstyle14.copyWith(
-                      fontSize: 14.sp,
+                  style: AppTextStyles.satoshiVariableMediumstyle14.copyWith(
+                      fontSize: 15.sp,
                       color: AppColors.defaultColor.withOpacity(0.7)),
                 ),
                 Text(
                   AppStrings.restaurantDescription,
-                  style: AppTextStyles.satoshiVariableBoldstyle14.copyWith(
-                      fontSize: 14.sp,
+                  style: AppTextStyles.satoshiVariableMediumstyle14.copyWith(
+                      fontSize: 15.sp,
                       color: AppColors.defaultColor.withOpacity(0.7)),
                 ),
               ],

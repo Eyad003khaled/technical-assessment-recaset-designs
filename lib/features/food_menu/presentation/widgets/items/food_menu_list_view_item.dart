@@ -60,7 +60,8 @@ class FoodMenuListViewItem extends StatelessWidget {
                           title,
                           style: AppTextStyles.satoshiVariableMediumstyle14
                               .copyWith(
-                            fontSize: 8.sp,
+                            fontSize: 10.sp,
+                            fontWeight: FontWeight.w100,
                           ),
                           maxLines: 2,
                         ),
@@ -69,7 +70,7 @@ class FoodMenuListViewItem extends StatelessWidget {
                         child: BackdropFilter(
                           filter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                           child: Container(
-                            padding: EdgeInsets.all(6.w),
+                            padding: EdgeInsets.all(10.w),
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               color:
@@ -87,7 +88,7 @@ class FoodMenuListViewItem extends StatelessWidget {
                                   style: AppTextStyles
                                       .satoshiVariableMediumstyle14
                                       .copyWith(
-                                    fontSize: 6.sp,
+                                    fontSize: 8.sp,
                                   ),
                                 ),
                                 Text(

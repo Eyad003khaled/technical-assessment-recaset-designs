@@ -19,7 +19,7 @@ class PreparationSection extends StatelessWidget {
           Text(
             AppStrings.preparation,
             style: AppTextStyles.satoshiVariableBoldstyle14.copyWith(
-                fontSize: 10.sp, color: AppColors.defaultColor.withOpacity(0.7)),
+                fontSize: 12.sp, color: AppColors.defaultColor.withOpacity(0.7)),
           ),
           SizedBox(
             height: 9.h,
