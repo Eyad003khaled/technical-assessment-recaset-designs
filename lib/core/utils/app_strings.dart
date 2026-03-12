@@ -7,5 +7,6 @@ abstract class AppStrings {
       atmoshpere = "Atmosphere",
       foodMenu = "Food Menu",
       currency = "JOD",
+      mainCourse = "Main Course",
       next = "next";
 }

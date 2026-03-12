@@ -7,7 +7,7 @@ const HomeScreen({ super.key });
 
   @override
   Widget build(BuildContext context){
-    return SafeArea(
+    return const SafeArea(
       child: Scaffold(
           extendBodyBehindAppBar: true,
       

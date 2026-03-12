@@ -10,12 +10,23 @@ class AppRouter {
   // Route names
   static const String splashScreen = '/splash_screen';
   static const String homeScreen = '/home_screen';
+  static const String FoodMenuDetailsScreen = '/food_menu_details_screen';
+
+
+
 static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
         // case splashScreen:
         //   return fadeRoute(const SplashScreen());
       case homeScreen:
         return fadeRoute(const HomeScreen());
+      case homeScreen:
+      final args =
+            (settings.arguments ?? <String, dynamic>{}) as Map<String, dynamic>;
+        return fadeRoute(const FoodMenuDetailsScreen(
+          foodImage:args["foodImage"] as String,
+          foodTitle : args["foodTitle"] as String
+        ));
 
       default:
         return MaterialPageRoute(

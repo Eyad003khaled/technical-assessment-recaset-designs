@@ -28,38 +28,45 @@ class FoodMenuSection extends StatelessWidget {
             ),
             SizedBox(height: 12.h),
             MasonryGridView.builder(
-  shrinkWrap: true,
-  physics: const NeverScrollableScrollPhysics(),
-  gridDelegate: const SliverSimpleGridDelegateWithFixedCrossAxisCount(
-    crossAxisCount: 2,
-  ),
-  mainAxisSpacing: 12,
-  crossAxisSpacing: 12,
-  itemCount: menuItems.length,
-  itemBuilder: (context, index) {
-    final item = menuItems[index];
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              gridDelegate:
+                  const SliverSimpleGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+              ),
+              mainAxisSpacing: 12,
+              crossAxisSpacing: 12,
+              itemCount: menuItems.length,
+              itemBuilder: (context, index) {
+                final item = menuItems[index];
 
-    // final heights = [
-    //   94.0,
-    //   127.0,
-    //   141.0,
-    //   118.0,
-    // ];
-    final heights = [
-      154.0,
-      187.0,
-      201.0,
-      178.0,
-    ];
+              
+                final heights = [
+                  154.0,
+                  187.0,
+                  201.0,
+                  178.0,
+                ];
 
-    return FoodMenuListViewItem(
-      imagePath: item.image,
-      title: item.title,
-      price: item.price,
-      height: heights[index],
-    );
-  },
-)
+                return GestureDetector(
+                  onTap : () {
+                    Navigator.pushNamed(context,AppRouter.foodMenuDetailsScreen,
+                    arguments: {
+            'foodImage': item.image,
+            'foodTitle': item.title,
+          },
+                    )
+                    // Handle item tap, e.g., navigate to details page
+                  },
+                  child: FoodMenuListViewItem(
+                    imagePath: item.image,
+                    title: item.title,
+                    price: item.price,
+                    height: heights[index],
+                  ),
+                );
+              },
+            )
           ]),
     );
   }
