@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
+import 'atmosphere_section.dart';
 import 'restaurant_section.dart';
 
 class HomeSections extends StatelessWidget {
-const HomeSections({ Key? key }) : super(key: key);
+const HomeSections({ super.key });
 
   @override
   Widget build(BuildContext context){
-    return CustomScrollView(
+    return const CustomScrollView(
       keyboardDismissBehavior:
                     ScrollViewKeyboardDismissBehavior.onDrag,
                 slivers: [
@@ -16,6 +17,9 @@ const HomeSections({ Key? key }) : super(key: key);
               //  ),
                SliverToBoxAdapter(
                   child: RestaurantSection(),
+               ),
+               SliverToBoxAdapter(
+                  child: AtmosphereSection(),
                )
 
                 ]
