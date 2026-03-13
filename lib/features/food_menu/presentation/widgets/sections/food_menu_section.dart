@@ -70,11 +70,24 @@ class FoodMenuSection extends StatelessWidget {
                         201.0,
                         178.0,
                       ];
-                      return FoodMenuListViewItem(
-                        imagePath: item.image,
-                        title: item.title,
-                        price: item.price,
-                        height: heights[index],
+                      return GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(
+                            context,
+                            AppRouter.foodMenuDetailsScreen,
+                            arguments: {
+                              'foodImage': item.image,
+                              'foodTitle': item.title,
+                              'foodPrice': item.price,
+                            },
+                          );
+                        },
+                        child: FoodMenuListViewItem(
+                          imagePath: item.image,
+                          title: item.title,
+                          price: item.price,
+                          height: heights[index],
+                        ),
                       );
                     },
                   );
@@ -83,7 +96,6 @@ class FoodMenuSection extends StatelessWidget {
                 return const SizedBox();
               },
             )
-
           ]),
     );
   }

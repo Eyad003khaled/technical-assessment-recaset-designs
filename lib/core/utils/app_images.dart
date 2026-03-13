@@ -14,6 +14,7 @@ class AppImages {
 
 
       static const String iconsBackwardArrow = '${_baseSvg}back_button.svg';
+      static const String iconsProfilePicture = '${_baseSvg}profile_picture.svg';
 
 
   }

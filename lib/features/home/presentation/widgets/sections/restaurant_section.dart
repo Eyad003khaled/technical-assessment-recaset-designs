@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:technical_assessment_recast_designs/core/utils/app_images.dart';
@@ -17,7 +19,32 @@ class RestaurantSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Stack(children: [
-          Image.asset(AppImages.imagesRestaurant),
+          //  Image.asset(AppImages.imagesRestaurant),
+          ShaderMask(
+            blendMode: BlendMode.dstIn, 
+            shaderCallback: (Rect bounds) {
+              return LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Colors.black, 
+                  Colors.black, 
+                  Colors.black
+                      .withOpacity(0), 
+                ],
+              
+                stops: [0.0, 0.85, 1.0],
+              ).createShader(bounds);
+            },
+            child: Image.asset(
+              AppImages.imagesRestaurant,
+              fit: BoxFit.cover, 
+              width: double.infinity,
+              alignment:
+                  Alignment.topCenter, 
+            ),
+          ),
+
           Row(
             children: [
               SizedBox(

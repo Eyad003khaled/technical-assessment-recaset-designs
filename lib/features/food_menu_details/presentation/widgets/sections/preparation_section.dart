@@ -6,7 +6,7 @@ import '../../../../../core/utils/app_strings.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 
 class PreparationSection extends StatelessWidget {
-  const PreparationSection({Key? key}) : super(key: key);
+  const PreparationSection({super.key});
 
   @override
   Widget build(BuildContext context) {

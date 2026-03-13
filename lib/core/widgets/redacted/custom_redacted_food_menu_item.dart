@@ -10,9 +10,8 @@ import '../../utils/app_colors.dart';
 import '../../utils/app_images.dart';
 
 class CustomRedactedFoodMenuItem extends StatelessWidget {
-  const CustomRedactedFoodMenuItem({super.key, this.isRedacted = true});
+  const CustomRedactedFoodMenuItem({super.key, });
 
-  final bool isRedacted;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +28,7 @@ class CustomRedactedFoodMenuItem extends StatelessWidget {
                 fit: BoxFit.cover,
               ).redacted(
                 context: context,
-                redact: isRedacted,
+                redact: true,
                 configuration: RedactedConfiguration(
                   redactedColor: AppColors.dashedBorderColor,
                 ),
@@ -69,7 +68,7 @@ class CustomRedactedFoodMenuItem extends StatelessWidget {
                           maxLines: 2,
                         ).redacted(
                           context: context,
-                          redact: isRedacted,
+                          redact: true,
                           configuration: RedactedConfiguration(
                             redactedColor: AppColors.dashedBorderColor,
                           ),
@@ -110,7 +109,7 @@ class CustomRedactedFoodMenuItem extends StatelessWidget {
                               ],
                             ).redacted(
                               context: context,
-                              redact: isRedacted,
+                              redact: true,
                               configuration: RedactedConfiguration(
                                 redactedColor: AppColors.dashedBorderColor,
                               ),

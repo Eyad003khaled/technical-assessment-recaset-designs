@@ -21,13 +21,27 @@ class MainCourseSection extends StatelessWidget {
           children: [
             Positioned(
               child: SizedBox(
-                width: double.infinity,
-                height: 289.h,
-                child: Image.asset(
-                  foodImage,
-                  fit: BoxFit.cover, // makes sure the image fills the box
-                ),
-              ),
+                  width: double.infinity,
+                  height: 289.h,
+                  child: ShaderMask(
+                    blendMode: BlendMode.dstIn, // Key blend mode
+                    shaderCallback: (Rect bounds) {
+                      return LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Colors.black,
+                          Colors.black,
+                          Colors.black.withOpacity(0),
+                        ],
+                        stops: [0.0, 0.85, 1.0],
+                      ).createShader(bounds);
+                    },
+                    child: Image.asset(
+                      foodImage,
+                      fit: BoxFit.cover,
+                    ),
+                  )),
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 13.w, vertical: 32.h),
