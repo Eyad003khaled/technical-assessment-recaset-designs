@@ -2,7 +2,7 @@
     <application
         android:label="technical_assessment_recast_designs"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:exported="true"
